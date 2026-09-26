@@ -1,4 +1,4 @@
-const CACHE_NAME = 'conversor-concept-2-v2-lampadas';
+const CACHE_NAME = 'conversor-concept-2-v3-lampadas-amarelas';
 const APP_ASSETS = [
   './',
   './index.html',
