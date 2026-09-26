@@ -1,0 +1,19 @@
+CONVERSOR CONCEPT 2 — V9.0 REFINAMENTO FINAL
+
+Substitua somente estes arquivos no GitHub:
+1. index.html
+2. Conversor 2_onepage_interativo_editavel.html
+3. sw.js
+
+Principais refinamentos:
+- painel Entenda melhor flutuante no desktop e painel inferior no celular;
+- tela do processo com maior prioridade visual;
+- lâmpadas com alvo de toque maior e seleção destacada;
+- filtros com indicação visual do filtro ativo;
+- pesquisa por TAG e também por termos do conteúdo técnico;
+- lâmpada encontrada pisca temporariamente;
+- modo edição claramente identificado;
+- botões Salvar, Cancelar e Restaurar este item;
+- aviso explícito de salvamento somente neste dispositivo;
+- identificação V9.0 no rodapé;
+- cache PWA atualizado mantendo estratégia network-first para o HTML.

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'conversor-concept-2-v8-inline-lamp';
+const CACHE_NAME = 'conversor-concept-2-v9-refinamento-final';
 const APP_ASSETS = [
   './',
   './index.html',
