@@ -100,23 +100,31 @@ button{cursor:pointer}
 }
 .stage img{width:100%;height:100%;object-fit:contain;display:block}
 
+
 .hotspot{
-  position:absolute;transform:translate(-50%,-50%);
-  width:18px!important;height:20px!important;min-width:18px;min-height:20px;
-  padding:0;margin:0;border:none!important;background:transparent!important;
-  box-shadow:none!important;color:transparent!important;font-size:0!important;line-height:0;
-  overflow:visible;cursor:pointer;transition:transform .15s ease;z-index:6
+  position:absolute;z-index:6;transform:translate(-50%,-50%);
+  display:flex;align-items:center;gap:6px;
+  border:0!important;background:transparent!important;
+  padding:3px!important;margin:0;cursor:pointer;
+  width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;
+  box-shadow:none!important;color:inherit!important;font-size:inherit!important;line-height:normal!important;
+  overflow:visible
 }
-.hotspot::before{
-  content:"💡";display:block;width:18px;height:20px;
-  font-size:16px;line-height:20px;text-align:center;
-  filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))
+.hotspot .bulb{
+  font-size:16px;line-height:1;opacity:.72;filter:saturate(.8);transition:.15s ease
 }
-.hotspot:hover,.hotspot.active{transform:translate(-50%,-50%) scale(1.12)}
-.hotspot:hover::before,.hotspot.active::before{
-  filter:drop-shadow(0 0 3px rgba(255,221,100,.72)) drop-shadow(0 1px 1px rgba(0,0,0,.25))
+.hotspot .lamp-label{
+  opacity:0;transform:translateX(-5px);transition:.15s ease;pointer-events:none;
+  white-space:nowrap;background:#06111de3;border:1px solid #3a5670;color:#fff;
+  border-radius:999px;padding:5px 8px;font-size:11px;font-weight:800
 }
-.hotspot::after{content:none!important;display:none!important}
+.hotspot:hover .lamp-label,.hotspot.active .lamp-label{opacity:1;transform:translateX(0)}
+.hotspot:hover .bulb,.hotspot.active .bulb{opacity:1;transform:scale(1.12)}
+.hotspot::before,.hotspot::after{content:none!important;display:none!important}
+@media(max-width:820px){
+  .hotspot .lamp-label{display:none}
+  .hotspot .bulb{font-size:14px}
+}
 
 .toolbar{
   padding:13px 16px;border-top:1px solid #21394e;
@@ -256,25 +264,25 @@ button{cursor:pointer}
   <div class="cardhead"><h2>Conversor — clique nos equipamentos e malhas</h2><button class="btn" onclick="document.documentElement.requestFullscreen?.()">Tela cheia</button></div>
   <div class="mapwrap"><div class="stage">
     <img src="conversor_u39.png" alt="Tela do conversor U-39">
-    <button class="hotspot vapor" aria-label="FIC-39020" data-key="fic39020" data-category="vapor" style="left:19.5%;top:10.1%">FIC-39020</button>
-    <button class="hotspot equip" aria-label="D-3904" data-key="d3904" data-category="equip" style="left:43%;top:35.5%">D-3904</button>
-    <button class="hotspot equip" aria-label="D-3902" data-key="d3902" data-category="equip" style="left:52%;top:18.5%">D-3902</button>
-    <button class="hotspot equip" aria-label="D-3903" data-key="d3903" data-category="equip" style="left:52.7%;top:36.8%">D-3903</button>
-    <button class="hotspot equip" aria-label="D-3901" data-key="d3901" data-category="equip" style="left:65.8%;top:23.8%">D-3901</button>
+    <button class="hotspot vapor" aria-label="FIC-39020" data-key="fic39020" data-category="vapor" style="left:19.5%;top:10.1%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39020</span></button>
+    <button class="hotspot equip" aria-label="D-3904" data-key="d3904" data-category="equip" style="left:43%;top:35.5%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">D-3904</span></button>
+    <button class="hotspot equip" aria-label="D-3902" data-key="d3902" data-category="equip" style="left:52%;top:18.5%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">D-3902</span></button>
+    <button class="hotspot equip" aria-label="D-3903" data-key="d3903" data-category="equip" style="left:52.7%;top:36.8%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">D-3903</span></button>
+    <button class="hotspot equip" aria-label="D-3901" data-key="d3901" data-category="equip" style="left:65.8%;top:23.8%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">D-3901</span></button>
 
-    <button class="hotspot vapor" aria-label="FIC-39023" data-key="fic39023" data-category="vapor" style="left:79.5%;top:15.2%">FIC-39023</button>
-    <button class="hotspot vapor" aria-label="FIC-39025" data-key="fic39025" data-category="vapor" style="left:79.5%;top:24.6%">FIC-39025</button>
-    <button class="hotspot vapor" aria-label="FIC-39024" data-key="fic39024" data-category="vapor" style="left:79.5%;top:33.9%">FIC-39024</button>
-    <button class="hotspot vapor" aria-label="FIC-39033" data-key="fic39033" data-category="vapor" style="left:79.5%;top:48.4%">FIC-39033</button>
+    <button class="hotspot vapor" aria-label="FIC-39023" data-key="fic39023" data-category="vapor" style="left:79.5%;top:15.2%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39023</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39025" data-key="fic39025" data-category="vapor" style="left:79.5%;top:24.6%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39025</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39024" data-key="fic39024" data-category="vapor" style="left:79.5%;top:33.9%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39024</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39033" data-key="fic39033" data-category="vapor" style="left:79.5%;top:48.4%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39033</span></button>
 
-    <button class="hotspot vapor" aria-label="FIC-39015" data-key="fic39015" data-category="vapor" style="left:16.1%;top:39.5%">FIC-39015</button>
-    <button class="hotspot vapor" aria-label="FIC-39016" data-key="fic39016" data-category="vapor" style="left:16.5%;top:46.3%">FIC-39016</button>
+    <button class="hotspot vapor" aria-label="FIC-39015" data-key="fic39015" data-category="vapor" style="left:16.1%;top:39.5%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39015</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39016" data-key="fic39016" data-category="vapor" style="left:16.5%;top:46.3%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39016</span></button>
 
-    <button class="hotspot ar" aria-label="FIC-39844A" data-key="fic39844a" data-category="ar" style="left:27.6%;top:68.8%">FIC-39844A</button>
-    <button class="hotspot nafta" aria-label="TORCH OIL" data-key="torchoil" data-category="nafta" style="left:18.7%;top:35.2%">TORCH OIL</button>
+    <button class="hotspot ar" aria-label="FIC-39844A" data-key="fic39844a" data-category="ar" style="left:27.6%;top:68.8%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39844A</span></button>
+    <button class="hotspot nafta" aria-label="TORCH OIL" data-key="torchoil" data-category="nafta" style="left:18.7%;top:35.2%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">TORCH OIL</span></button>
 
-    <button class="hotspot nafta" aria-label="FIC-39240" data-key="fic39240" data-category="nafta" style="left:81.4%;top:74.2%">FIC-39240</button>
-    <button class="hotspot nafta" aria-label="FIC-39728" data-key="fic39728" data-category="nafta" style="left:81.3%;top:85.8%">FIC-39728</button>
+    <button class="hotspot nafta" aria-label="FIC-39240" data-key="fic39240" data-category="nafta" style="left:81.4%;top:74.2%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39240</span></button>
+    <button class="hotspot nafta" aria-label="FIC-39728" data-key="fic39728" data-category="nafta" style="left:81.3%;top:85.8%"><span class="bulb" aria-hidden="true">💡</span><span class="lamp-label">FIC-39728</span></button>
   </div></div>
   <div class="toolbar"><input class="search" id="search" placeholder="Buscar por TAG: ex. FIC-39024"><button class="btn" onclick="searchTag()">Buscar</button><button class="btn danger" onclick="resetAll()">Restaurar padrão</button></div>
   <div class="chips"><button class="chip" data-filter="all">Todos</button><button class="chip" data-filter="equip">Equipamentos</button><button class="chip" data-filter="vapor">Vapor</button><button class="chip" data-filter="nafta">Nafta / combustível</button><button class="chip" data-filter="ar">Ar</button></div>

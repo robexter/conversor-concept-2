@@ -1,0 +1,8 @@
+CONVERSOR CONCEPT 2 — ARQUIVOS PARA ATUALIZAÇÃO
+
+Substitua no repositório GitHub apenas estes arquivos:
+1. index.html
+2. Conversor 2_onepage_interativo_editavel.html
+3. sw.js
+
+Os demais arquivos do projeto podem permanecer como estão.
