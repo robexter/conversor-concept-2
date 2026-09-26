@@ -1,4 +1,4 @@
-const CACHE_NAME = 'conversor-concept-2-v6-lampadas-area-fria-reais';
+const CACHE_NAME = 'conversor-concept-2-v7-lampada-png';
 const APP_ASSETS = [
   './',
   './index.html',
@@ -7,7 +7,8 @@ const APP_ASSETS = [
   './conversor_u39.png',
   './icon-192.png',
   './icon-512.png',
-  './apple-touch-icon.png'
+  './apple-touch-icon.png',
+  './lampada-area-fria.png'
 ];
 
 self.addEventListener('install', event => {

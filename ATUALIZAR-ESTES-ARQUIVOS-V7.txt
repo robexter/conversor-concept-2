@@ -1,0 +1,12 @@
+CONVERSOR CONCEPT 2 — CORREÇÃO DEFINITIVA DAS LÂMPADAS
+
+Substituir:
+1. index.html
+2. Conversor 2_onepage_interativo_editavel.html
+3. sw.js
+
+Adicionar:
+4. lampada-area-fria.png
+
+A lâmpada agora é uma imagem PNG real extraída do padrão visual da página Área Fria Concept,
+eliminando dependência do emoji/fonte do navegador.
