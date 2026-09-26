@@ -1,0 +1,7 @@
+ATUALIZAÇÃO — LÂMPADAS MAIS AMARELAS
+
+Substituir apenas:
+1. index.html
+2. Conversor 2_onepage_interativo_editavel.html
+
+Nesta versão as lâmpadas ficaram um pouco mais amarelas, mantendo o mesmo padrão visual.
