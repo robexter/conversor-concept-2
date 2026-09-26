@@ -25,3 +25,7 @@ Envie todos os arquivos do ZIP para a raiz do repositório e habilite Pages.
 
 ## Ajuste visual
 Os pontos explicativos foram alterados para **ícones de lâmpada**, removendo as áreas coloridas sobre a imagem do conversor.
+
+
+## Lâmpadas — padrão Área Fria
+Os pontos interativos usam agora uma lâmpada pequena vetorial, amarela, transparente, sem círculo ou fundo preto, semelhante ao padrão visual mostrado na página Concept da Área Fria.
