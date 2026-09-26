@@ -1,0 +1,11 @@
+CONVERSOR CONCEPT 2 — V8 LÂMPADAS INLINE
+
+Substitua somente:
+1. index.html
+2. Conversor 2_onepage_interativo_editavel.html
+3. sw.js
+
+Nesta versão a imagem da lâmpada está incorporada diretamente no HTML/CSS.
+Não é necessário adicionar lampada-area-fria.png.
+O service worker também foi alterado para buscar a página HTML primeiro na rede,
+reduzindo o risco de uma versão antiga ficar presa no cache do PWA.

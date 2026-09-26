@@ -102,41 +102,39 @@ button{cursor:pointer}
 
 
 
+
 .hotspot{
   position:absolute!important;
-  z-index:30!important;
-  transform:translate(-50%,-50%);
-  display:flex!important;
-  align-items:center;
-  gap:5px;
-  border:0!important;
-  background:transparent!important;
-  padding:2px!important;
+  z-index:999!important;
+  transform:translate(-50%,-50%)!important;
+  display:block!important;
+  width:24px!important;
+  height:28px!important;
+  min-width:24px!important;
+  min-height:28px!important;
+  padding:0!important;
   margin:0!important;
-  cursor:pointer;
-  width:auto!important;
-  height:auto!important;
-  min-width:0!important;
-  min-height:0!important;
-  overflow:visible!important;
+  border:0!important;
+  border-radius:0!important;
+  background-color:transparent!important;
+  background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA8CAYAAAAUufjgAAAPtklEQVR42u2aSYwc13nHf2+r6n2mezgzHHJGHFGiKFKyLOQgI4cgOsSwFsjwhfTBMBggRhDn4EMcI0DggJwYCRA4caAFAWQ4F19oiAFiwxcfEkA2Eic0GFiRJYqkaHFIi7NPTy/TXV1Vb8lhukcUqYUjB7AQ5AEFNGrp+te3/N//+94TL774YqhUKkxOTjIxMYHWGu89Qgg+DkNrrX2e53JjY4Otra1+uVz+lVKqL4TAey+FEEEIEX5jAAuFQr69vR3fuHGDtbW164cOHXruE5/4xGWANE2jOI6tEML/xgDGcWybzWa8vLzMhQsX1l544YXvAyt8TIYEEEJgjKFUKukoimp8jIb23gshBFEUMTY2Fj311FNTTz755NsAzWYzPnjwYJYkSQCo1+thcnLyXfG4vr4uAG4/f/u42/vuADj64b3HOUeWZSwtLQGwtrbGxsYGlUoFgKWlpQBYYBSTstPpGIBarXbr+Ts8dZf33QlwlKHDrM3b7fbGwsJCf3i9/14PnT59WgIsLCzYIWAAQgji9owfnnvXfXuOwVuGA5IPe2hxcTF6+eWXo9vPnzx50ozAjz7k5MmT5teJQfHSSy8la2trhatXr3LlypXX8zz/5vj4+Btaa6IoMkKITCklAPr9fufs2bOXgQBw/Pjx6OjRo8esteGHP/zh68MP5MSJEwrg3Llzbvge9cwzzzxULBZ1mqZv/eAHP2iNPmBhYeED3S2995H3njzPUUodGh8f/1qpVHq+UCg8b4z5ltb6W8aY56Moel5r/dUvfelLB0cPHzt27IjW+q+iKPrG5z//+flb/jeanZ3dtfDnPve5+VKp9A2t9V9XKpUHR+cvXryob7X4+8WgtNaSZRnFYrEyNzf30MTEBM45nHOEEIjjGIDl5eXDg8Hgv59++umfGWOo1+u/J4R4GsBa+5NnPvOZH+VC/Cputdx6HPPEE0/UgNkDBw48qZT6rHOu572vj14+OzurPiw2tZQS7z3WWkqlEvfeey8HDx6k1WrR6XR2OTKEQJZl+9bW1r5SLpe38jxHCLFvamqSKDKsr61/uVWKP1kI7oX7pvRry7Qol6MHpIz/qFqtPj41NUW/3/+VMaY7enmtVgt3RTMhBJxzFAoFPzExYSuVir9x4wY3btwQSimMMSGEgDEmnpubO1KrVbl58yaDQYrzdOJCpdTYp+5rdwdieyD/YeHb3+kDfPkrXxXCJr89M7P/PmOMzbJsUUq5/ZF4MISAUkoKIUy73Q6XLl3itddeI4oiEcdxADhy5Ih49NFHGatVWbp5k5XVZbSJTLlS0+P1Ogdz19O1Q71/fuk7ADzx5FP9xSu/6NfHx3j75pL+5S/figeDgbyFDZifn787gEMeJM9z4ZwTzrld4EMuI4TgAZvm3m91+jS3OmJyoiNjMQjjpXJemC76QffVT/3BiU8WO+2cS//17w/vv+ewD4isu903m5sbUbe7rT6SBYUQu4lRq9W4//77KRaLDF1MCIFSqShXVpbNzaXV0Osn1CoF9o8rZmoDMVZomW3fuW+9ufonY5VqV+DYWLtWLo9PTquoZBBCRJHRhYISHwngyFree6IoYt++fQghdpPEe0er3WHx+g3R3FgR01XLgYkqR2c1U+UepSgTJekqpYPjx0pFyXY/o1ApUjQt188SkSY90szLNJUyBIQQhD3HoBACKSXWWjqdDhsbGwgpiaIIvGWz2WJrc5Wq3uaReyIOH4ypVDxRtE0pKlGpVBifmGLqoMTajMiAx/prN7sqG7TodvuiN7D65MkT5vTpc3bx5UW42xgEkFIipSRNU1ZWVrl27RrGaJSOya0l2ISxKOH+KcmxuYjphsLisdJjYoOpNLwqH7CqUPdKBiLZIx1s+u1kxUw1FMtjKm92t5vnzp3LAE6f2qOLR3VImqZsNjdZXl4mjjRCFcms42Adjh/SPDgbUa1o+nkgSFDaIKIqstCQId5nQrQ/oAsElXjESr5vGh560BHpzD16rJS88rMhDz4yJTqduxQL3nuUUpRKJaLIkGcZ7XaHdqdLlvYp6QEH6p7D+yOm6gWQku1MkHqFl4YcSR7AI4XHSEtVJq4hB35CxaUJ7plr+KP31+v1servfuELnz3+6U9/ujw3d9zdqo7eF2AIYdeCSim01mgt8QEyJ6iVFQ/dE3P8nphqSZA7CEJh4ggVx3glSLOEPN0Cu4Wigwg98mwgB4NcOy99HGtbLhfmU8vXIsXXagU5//rr2IWFBf9Bc7IOISClRGtNkiTcvHkTISDPMqKoQBCaSlFz70zMPVMGrQX9LKBjUEYhYwNa4cjJbReVrYOOQFnSTJIlW1KEno+kd4VCXJ5sVI/Xyu0iwf/jSMnMwvvOydp7j9aaOI5ZX1/nwoULIKDZbKKNwXqBwFM0UIoEQgqsA6RAKImQEoRESI0LjkHWJg8KpMU6hcvaKNHGyVQYJRmrGWYmS0ltLBpJMR45XgqLH1CTIKXEGEO/36fZbO74XgSU0ngCIQSkACmGQlDKnQMIuUdYT3AOlwVckoOyCJOC1ISQImSKdRZwvhQLO70vbqbW5B+JqJ1zCEBq+Q4/7hgMJcEJgQhDgF4QMkfwAXAEEXa+QA0gTpCFCIzaeYtwKJzUwhsjgrHBvhNz88DiXRK11hopYIdxPojsBfgdC+IDKBBK7OSddYTQhRCBKIDSEBzBWbyzOG8hz/c+1e1Od2HHQELsZHYIgdwFcs9OOBMQ3hO8ACHBKEQ8TBghCamFJMMPUqQSoD3gcbn1WZrZNM3z1Gb+HVWzB4DvxUPeQ2p3jlgNucl5CMPANAERCURBgtoRKyG14ALeWoQnRDr4zFrZ2bbR2yv9Rn/b3lUx9Z7cE4AQdiwoJWQu0Op5Wj1PZkEEwAeCC4BH4MDlhDwnZBnB5SA8QXi8zcFmQYs8HwwyNloZb68MiteXBuqd2uSy2BPAEUglBUYLkhQWVy2Lq5Yk9cRGYPTwLuchd2AtIU8J+QBvM7zzEHyQIvcKp7PUjXU6A9bW+5fbvfzljZ7bGpKzgI7bs4tDAK125FY/DVxdykAIJscU41W9kxAiQA7Be4IKiODACbAQMoGSIWjIQ5BxMlCsrCct4e3fJz3xE72pbzQa583p06dzWLDvV37eAXCUFM45gvdICWnm6eSB6zpwpS6JYsm+usZICULhfED6IdggwBIEBKUlUgq63UFnq+MvJf3Bv9072f+nM//yr5sAD159Im40YGHh/Vshd6iZkaIJIeCB4AJKQiGCXuL4xbWUgYNH7i1wYCLC6LCTLCEQMvAOlCCogsiDFnFnEKL1ZvqGMe4bc9H6T0/++X82R+977rkfZUL8KOy1JkFKSaFQ2JH6PiCGJN0b5Cw3M6x3lCJJHGkmxxVGCYIL5OkOwKgoiYrQHjjeWhpwabHP21tR2Bw8Zk788W9V5suviMXFg30hzvm7zuJbXau1ptFocODAAfbP7Gdqepp9U9OMjdXQSrHVybl6M+fGOqROEhuJROLyHUqSUgglpdnqpOEXv+zkV95296Irf3Fo3/bXa2mYK5VMcu7cOX/ixAkTQhB7EqzGGMbGxpiZmeHWDgNApbyFloKtVpetvmZzW4HQlIsSkVsGYoeQg/ciSYLYbCV+dTN36ImxQ3Ozn8L2ZoWKX1pY+PEbo87CmTNn7AdNWXrkWuccxhgqlQozMzNMTU1Rq9WG13Y8EUcRQgSCjEkGOQMr8UJjjMEYQaQ9IXjSLKe9belsQ7FcpVqcYqIxAbbUFQXj9lTVjVofWZZRrVY5fPgw9XqddrvN5ubmbp0CYLRmfHyc1AqWlldpdQY021U6tTLOa4KWEDxpHrGdgypqZmdLQpq6l5Is92GNQZLtqfUhpdztrFarVR544AGklFy+fJlLly5hjNltHk1OTjJ38CBRpMmzhPUNy/Xl/VRLVYpRiSBSApBIRYgiao0KhYmIZJDTbDZZXV3Bp9t8pM7CrWLh1gpPSolSCu89SZKwurZGP+nj8xQRxfSSAlv9KkQRQlrS1NHd9vQzhSlVqY0Xkaoj19fzwubm5r7+sBW8lyY6clj7drtdrly5QqPRYGZmhrGxsXcB3NraYmlpiXa7RcHENMbrxHGRIIsEOY71gl6asNXq0t1OKdZSTDEKI8UupSwKY3bn4H6//6FdBnmr5G+327z66qu7rp2fn2d2dpbp6Wn2799PvV4niiIEAiFFUFJ4uaO7vHXCu2CCMiXK1Rrj42O+XCrgrRf9/qCbpunrxpgfG2O2bimQPjRh9EioKqVI05ROp0Oe5xSLxV1eHJG3VprDhw9TqVT8+tqabXc6frvRJ0kGaN1Fx0VZrMS6PjGJ1pFNbaZbnSbbzd5V78OzwIXBYLAI6NOnT1vAflgLWI8I2lpLsVikUqkEY0xYWVlheXl5t2bWWovZ2dlw5MgRJicn5avWRtutLt4rCAbvJMEGvLTIArZcKeQiDZFt5YWN9XXZSzZ/+r3vfe9NgIcffrhYq9U+FNxuFltrSdOU8fFxf/ToUeu99z//+c+5du2aMMYEpZTQWlNv1EO1VqNYKBYa4w1cEpCiBJTAl0kT2Gr2aTdtVh4bZKnvl1vdFt1+p5T0+6WPtNI0suCogVkoFKJiscj8/DxRFKG1RimFlJJGo0Gv16Pb7pCl+WWbu3ZvO2GrvU2aBnwItTRLjlbGKqWklZQ6vWbo9LcuW2vPCyHlqVOnCvPz89nFixfd8ePH7z6LlVJEUcTy8jIXL15kbm6OY8eO8dhjj+G93z2SQcLy0hJvvvnmWpbZbyHlK8FJvBM4H8joP2J173RlYnw2yz3d9dbNPM/+zln3H8b0b4yNzYjh8sVduXeUJF5rLeM4ptfrba+vr1/33veGGSzzPA95nnspZfbWW2/F169f5+rVq6+cP3/++8Dau1ag/vYP39LpgU8meftTSZKS5cl5kN//7ne/uwHw7LPPxs1mk7sFN4rBTEpZGJLy9TzPv5ll2RtxHGOMiUqlUu6990opf/36dTUYDGi1Wu3bwQEs/Om3N/7yb77+nNChTrBYm2w999yLG6PrzWYzX1hYCHudi91IyWitm5OTky+fPXv2+tmzZz+YQKXki7/zxQLzDKerec4s/H4q/ky8efta3cmTJ81e3PpBnQXV7/eLd/Og9575x+ezW1bwENy5dUAIEUII+UfdVqBvE4xGStk4depU4fHHH2d1dTWu1+t5FEV+eno6nD9/XiwuLtLv9/25c+fusMhwhtC3CGEP/FpbCm4XC945l8/Pz2eLi4ssLy/LmZmZDPCLw/J/fn6eYRzdYZGFhQUfQsjPnDkjAM6cOfNrb8h4r6oujCxz6tQpD/i9xM4QUBgC/t/Zs/BxHv8P8P88wP8BgutZP+af4vsAAAAASUVORK5CYII=")!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:20px auto!important;
+  box-shadow:none!important;
   opacity:1!important;
   visibility:visible!important;
-  box-shadow:none!important;
+  overflow:visible!important;
+  cursor:pointer!important;
+  pointer-events:auto!important;
 }
-.hotspot .bulb-img{
-  display:block!important;
-  width:18px!important;
-  height:auto!important;
-  opacity:.92!important;
-  visibility:visible!important;
-  pointer-events:none;
-  filter:drop-shadow(0 1px 1px rgba(0,0,0,.35));
-  transition:.15s ease;
-}
+.hotspot .bulb-img{display:none!important}
 .hotspot .lamp-label{
+  position:absolute;
+  left:23px;
+  top:50%;
+  transform:translateY(-50%) translateX(-4px);
   opacity:0;
-  transform:translateX(-4px);
-  transition:.15s ease;
   pointer-events:none;
   white-space:nowrap;
   background:#06111de3;
@@ -146,17 +144,20 @@ button{cursor:pointer}
   padding:5px 8px;
   font-size:11px;
   font-weight:800;
+  transition:.15s ease;
 }
-.hotspot:hover .lamp-label,.hotspot.active .lamp-label{opacity:1;transform:translateX(0)}
-.hotspot:hover .bulb-img,.hotspot.active .bulb-img{
-  opacity:1!important;
-  transform:scale(1.12);
-  filter:drop-shadow(0 0 4px rgba(255,221,100,.72)) drop-shadow(0 1px 1px rgba(0,0,0,.25));
+.hotspot:hover .lamp-label,.hotspot.active .lamp-label{
+  opacity:1;
+  transform:translateY(-50%) translateX(0);
+}
+.hotspot:hover,.hotspot.active{
+  background-size:22px auto!important;
+  filter:drop-shadow(0 0 4px rgba(255,221,100,.75));
 }
 .hotspot::before,.hotspot::after{content:none!important;display:none!important}
 @media(max-width:820px){
+  .hotspot{width:22px!important;height:25px!important;background-size:18px auto!important}
   .hotspot .lamp-label{display:none!important}
-  .hotspot .bulb-img{width:16px!important}
 }
 
 .toolbar{
@@ -297,25 +298,25 @@ button{cursor:pointer}
   <div class="cardhead"><h2>Conversor — clique nos equipamentos e malhas</h2><button class="btn" onclick="document.documentElement.requestFullscreen?.()">Tela cheia</button></div>
   <div class="mapwrap"><div class="stage">
     <img src="conversor_u39.png" alt="Tela do conversor U-39">
-    <button class="hotspot vapor" aria-label="FIC-39020" data-key="fic39020" data-category="vapor" style="left:19.5%;top:10.1%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39020</span></button>
-    <button class="hotspot equip" aria-label="D-3904" data-key="d3904" data-category="equip" style="left:43%;top:35.5%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">D-3904</span></button>
-    <button class="hotspot equip" aria-label="D-3902" data-key="d3902" data-category="equip" style="left:52%;top:18.5%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">D-3902</span></button>
-    <button class="hotspot equip" aria-label="D-3903" data-key="d3903" data-category="equip" style="left:52.7%;top:36.8%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">D-3903</span></button>
-    <button class="hotspot equip" aria-label="D-3901" data-key="d3901" data-category="equip" style="left:65.8%;top:23.8%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">D-3901</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39020" data-key="fic39020" data-category="vapor" style="left:19.5%;top:10.1%"><span class="lamp-label">FIC-39020</span></button>
+    <button class="hotspot equip" aria-label="D-3904" data-key="d3904" data-category="equip" style="left:43%;top:35.5%"><span class="lamp-label">D-3904</span></button>
+    <button class="hotspot equip" aria-label="D-3902" data-key="d3902" data-category="equip" style="left:52%;top:18.5%"><span class="lamp-label">D-3902</span></button>
+    <button class="hotspot equip" aria-label="D-3903" data-key="d3903" data-category="equip" style="left:52.7%;top:36.8%"><span class="lamp-label">D-3903</span></button>
+    <button class="hotspot equip" aria-label="D-3901" data-key="d3901" data-category="equip" style="left:65.8%;top:23.8%"><span class="lamp-label">D-3901</span></button>
 
-    <button class="hotspot vapor" aria-label="FIC-39023" data-key="fic39023" data-category="vapor" style="left:79.5%;top:15.2%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39023</span></button>
-    <button class="hotspot vapor" aria-label="FIC-39025" data-key="fic39025" data-category="vapor" style="left:79.5%;top:24.6%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39025</span></button>
-    <button class="hotspot vapor" aria-label="FIC-39024" data-key="fic39024" data-category="vapor" style="left:79.5%;top:33.9%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39024</span></button>
-    <button class="hotspot vapor" aria-label="FIC-39033" data-key="fic39033" data-category="vapor" style="left:79.5%;top:48.4%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39033</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39023" data-key="fic39023" data-category="vapor" style="left:79.5%;top:15.2%"><span class="lamp-label">FIC-39023</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39025" data-key="fic39025" data-category="vapor" style="left:79.5%;top:24.6%"><span class="lamp-label">FIC-39025</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39024" data-key="fic39024" data-category="vapor" style="left:79.5%;top:33.9%"><span class="lamp-label">FIC-39024</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39033" data-key="fic39033" data-category="vapor" style="left:79.5%;top:48.4%"><span class="lamp-label">FIC-39033</span></button>
 
-    <button class="hotspot vapor" aria-label="FIC-39015" data-key="fic39015" data-category="vapor" style="left:16.1%;top:39.5%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39015</span></button>
-    <button class="hotspot vapor" aria-label="FIC-39016" data-key="fic39016" data-category="vapor" style="left:16.5%;top:46.3%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39016</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39015" data-key="fic39015" data-category="vapor" style="left:16.1%;top:39.5%"><span class="lamp-label">FIC-39015</span></button>
+    <button class="hotspot vapor" aria-label="FIC-39016" data-key="fic39016" data-category="vapor" style="left:16.5%;top:46.3%"><span class="lamp-label">FIC-39016</span></button>
 
-    <button class="hotspot ar" aria-label="FIC-39844A" data-key="fic39844a" data-category="ar" style="left:27.6%;top:68.8%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39844A</span></button>
-    <button class="hotspot nafta" aria-label="TORCH OIL" data-key="torchoil" data-category="nafta" style="left:18.7%;top:35.2%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">TORCH OIL</span></button>
+    <button class="hotspot ar" aria-label="FIC-39844A" data-key="fic39844a" data-category="ar" style="left:27.6%;top:68.8%"><span class="lamp-label">FIC-39844A</span></button>
+    <button class="hotspot nafta" aria-label="TORCH OIL" data-key="torchoil" data-category="nafta" style="left:18.7%;top:35.2%"><span class="lamp-label">TORCH OIL</span></button>
 
-    <button class="hotspot nafta" aria-label="FIC-39240" data-key="fic39240" data-category="nafta" style="left:81.4%;top:74.2%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39240</span></button>
-    <button class="hotspot nafta" aria-label="FIC-39728" data-key="fic39728" data-category="nafta" style="left:81.3%;top:85.8%"><img class="bulb-img" src="lampada-area-fria.png" alt=""><span class="lamp-label">FIC-39728</span></button>
+    <button class="hotspot nafta" aria-label="FIC-39240" data-key="fic39240" data-category="nafta" style="left:81.4%;top:74.2%"><span class="lamp-label">FIC-39240</span></button>
+    <button class="hotspot nafta" aria-label="FIC-39728" data-key="fic39728" data-category="nafta" style="left:81.3%;top:85.8%"><span class="lamp-label">FIC-39728</span></button>
   </div></div>
   <div class="toolbar"><input class="search" id="search" placeholder="Buscar por TAG: ex. FIC-39024"><button class="btn" onclick="searchTag()">Buscar</button><button class="btn danger" onclick="resetAll()">Restaurar padrão</button></div>
   <div class="chips"><button class="chip" data-filter="all">Todos</button><button class="chip" data-filter="equip">Equipamentos</button><button class="chip" data-filter="vapor">Vapor</button><button class="chip" data-filter="nafta">Nafta / combustível</button><button class="chip" data-filter="ar">Ar</button></div>

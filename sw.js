@@ -1,4 +1,4 @@
-const CACHE_NAME = 'conversor-concept-2-v7-lampada-png';
+const CACHE_NAME = 'conversor-concept-2-v8-inline-lamp';
 const APP_ASSETS = [
   './',
   './index.html',
@@ -7,8 +7,7 @@ const APP_ASSETS = [
   './conversor_u39.png',
   './icon-192.png',
   './icon-512.png',
-  './apple-touch-icon.png',
-  './lampada-area-fria.png'
+  './apple-touch-icon.png'
 ];
 
 self.addEventListener('install', event => {
@@ -27,14 +26,32 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
+
+  const isHTML = event.request.mode === 'navigate' ||
+                 event.request.destination === 'document' ||
+                 event.request.url.endsWith('/index.html') ||
+                 event.request.url.endsWith('Conversor%202_onepage_interativo_editavel.html');
+
+  if (isHTML) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then(r => r || caches.match('./index.html')))
+    );
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request).then(cached => {
-      const network = fetch(event.request).then(response => {
+    caches.match(event.request).then(cached =>
+      cached || fetch(event.request).then(response => {
         const copy = response.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         return response;
-      });
-      return cached || network.catch(() => caches.match('./index.html'));
-    })
+      })
+    )
   );
 });
