@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "Conversor Concept 2",
+  "short_name": "Conversor Concept 2",
+  "description": "One page interativa e editável do Conversor da FCC U-39.",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f1722",
+  "theme_color": "#1f4f7a",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
