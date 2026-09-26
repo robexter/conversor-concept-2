@@ -531,6 +531,50 @@ button{cursor:pointer}
   .chips{padding:0 10px 12px!important}
 }
 
+
+/* =========================================================
+   V9.1 — CORREÇÃO DE ENQUADRAMENTO E POSIÇÃO DAS LÂMPADAS
+   Corrige o HMI para o aspecto real da imagem (1280x917)
+   e evita faixas laterais que deslocavam os hotspots.
+   ========================================================= */
+.app{
+  max-width:1440px!important;
+}
+.mapwrap{
+  padding:8px!important;
+  display:flex!important;
+  justify-content:center!important;
+}
+.stage{
+  width:min(100%,1280px)!important;
+  aspect-ratio:1280/917!important;
+  height:auto!important;
+  max-height:none!important;
+  min-height:0!important;
+  margin:0 auto!important;
+}
+.stage img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+}
+.side{
+  width:min(500px,calc(100vw - 28px))!important;
+}
+@media(max-width:820px){
+  .app{max-width:none!important}
+  .mapwrap{padding:6px!important}
+  .stage{
+    width:100%!important;
+    aspect-ratio:1280/917!important;
+  }
+  .side{
+    left:8px!important;
+    right:8px!important;
+    width:auto!important;
+  }
+}
+
 </style>
 </head>
 <body>

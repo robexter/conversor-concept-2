@@ -1,0 +1,12 @@
+CONVERSOR CONCEPT 2 — V9.1 CORREÇÃO DE ENQUADRAMENTO E LÂMPADAS
+
+Substitua somente:
+1. index.html
+2. Conversor 2_onepage_interativo_editavel.html
+3. sw.js
+
+O que foi corrigido:
+- a tela do conversor passa a usar o aspecto real da imagem (1280 x 917);
+- foram removidas as faixas laterais que deslocavam as lâmpadas;
+- as lâmpadas voltam a coincidir com os TAGs/equipamentos;
+- o enquadramento da tela principal foi ampliado.

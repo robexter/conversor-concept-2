@@ -1,4 +1,4 @@
-const CACHE_NAME = 'conversor-concept-2-v9-refinamento-final';
+const CACHE_NAME = 'conversor-concept-2-v9-1-correcao-enquadramento';
 const APP_ASSETS = [
   './',
   './index.html',
