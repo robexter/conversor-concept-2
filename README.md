@@ -21,3 +21,7 @@ O botão **📲 Instalar App** fica visível no aplicativo.
 
 ## GitHub Pages
 Envie todos os arquivos do ZIP para a raiz do repositório e habilite Pages.
+
+
+## Ajuste visual
+Os pontos explicativos foram alterados para **ícones de lâmpada**, removendo as áreas coloridas sobre a imagem do conversor.
