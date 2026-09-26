@@ -1,4 +1,4 @@
-const CACHE_NAME = 'conversor-concept-2-v4-lampada-area-fria';
+const CACHE_NAME = 'conversor-concept-2-v5-padrao-area-fria';
 const APP_ASSETS = [
   './',
   './index.html',

@@ -29,3 +29,7 @@ Os pontos explicativos foram alterados para **ícones de lâmpada**, removendo a
 
 ## Lâmpadas — padrão Área Fria
 Os pontos interativos usam agora uma lâmpada pequena vetorial, amarela, transparente, sem círculo ou fundo preto, semelhante ao padrão visual mostrado na página Concept da Área Fria.
+
+
+## V5 — padrão visual U39 Área Fria Concept
+A one page foi reestilizada para seguir o mesmo padrão visual do portal U39 Área Fria Concept: fundo radial azul-escuro, topbar translúcida, painéis em gradiente, botões verdes/azuis, hero com ícone, bordas/raios equivalentes e footer de identidade visual. A lógica técnica, edição, PWA e pontos clicáveis foram preservados.
